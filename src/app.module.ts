@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { HttpbinModule } from './httpbin/httpbin.module';
 
 @Module({
-  imports: [],
+  imports: [HttpbinModule],
   controllers: [AppController],
   providers: [AppService],
 })
