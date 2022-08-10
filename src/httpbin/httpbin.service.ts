@@ -10,7 +10,7 @@ export class HttpbinService {
   getUserAgentFromHttpbinPost(): Observable<any> {
     return this.httpbinAdaptor.post().pipe(
       map((response: AxiosResponse<any>) => ({
-        userAgent: response.data.headers['User-Agent'],
+        userAgent: response.headers['User-Agent'],
       })),
     );
   }
